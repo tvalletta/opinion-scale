@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Opinion Scale Test page</title>
+		<script src="js/lib/socket.io/socket.io.min.js" charset="utf-8"></script>
+		<script src="js/display-connection.js" charset="utf-8"></script>
+		<script src="js/opinion-scale.js" charset="utf-8"></script>
+		<script>
+			var scale;
+			function initOpinionScale() {
+				var green 		= new RGBA(122, 179, 50, .75),
+					gold75 		= new RGBA(255, 247, 154, 0.75),
+					gold50 		= new RGBA(255, 247, 154, 0.5),
+					gold25 		= new RGBA(255, 247, 154, 0.25),
+					red 		= new RGBA(255, 9, 20, 0.75),
+					blue 		= new RGBA(0, 173, 239, 0.75),
+					purple 		= new RGBA(235, 0, 137, 0.75);
+				scale = OpinionScale(green, gold50); // Gold | Gold
+			}
+		</script>
+	</head>
+	<body id="index" onload="connect(initOpinionScale)">
+		<canvas id='canvas' width='500' height='100'/>
+	</body>
+</html>
